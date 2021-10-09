@@ -5,6 +5,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
+    "dev:test-e2e": "concurrently -n vite,cypress \"npm:dev\" \"npm:test:e2e\"",
+    "test:e2e": "cypress open",
     "prepare": "husky install",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx --color --quiet",
     "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --color --quiet --fix",
@@ -29,11 +31,14 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@types/node": "^16.10.3",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@vitejs/plugin-react": "^1.0.0",
+    "concurrently": "^6.3.0",
+    "cypress": "^8.5.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.1",
