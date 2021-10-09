@@ -1,7 +1,7 @@
 import React from 'react'
 
 const App: React.FC = () => {
-  return <div />
+  return <div data-cy="title">Vite React TS + Jest + Testing Library</div>
 }
 
 export default App
