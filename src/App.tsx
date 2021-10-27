@@ -1,7 +1,9 @@
 import React from 'react'
 
+import RoutesConfig from './routes'
+
 const App: React.FC = () => {
-  return <div />
+  return <RoutesConfig />
 }
 
 export default App
